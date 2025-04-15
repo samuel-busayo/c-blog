@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Posts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styling.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <div class="form-container">
+    <div class="form-card">
+      <div class="form-header">
+        <h2><i class="fas fa-pen-alt"></i> Share Your Story</h2>
+        <p>Your anonymous experience can help others</p>
+      </div>
+      
+      <form class="elegant-form" action="/posts" method="POST">
+        <!-- Story Title -->
+        <div class="form-group floating">
+          <input type="text" id="title" name="title" required placeholder=" ">
+          <label for="title">Story Title</label>
+          <div class="underline"></div>
+        </div>
+        
+        <!-- Author Name -->
+        <div class="form-group floating">
+          <input type="text" id="author" name="author" required placeholder=" ">
+          <label for="author">Author Name</label>
+          <div class="underline"></div>
+          <div class="privacy-note">
+            <i class="fas fa-info-circle"></i>
+            <span>For your privacy, please don't use your real name</span>
+          </div>
+        </div>
+        
+        <!-- Story Content -->
+        <div class="form-group">
+          <label for="content">Your Story</label>
+          <textarea id="content" name="content" rows="8" required></textarea>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">
+            <i class="fas fa-paper-plane"></i> Publish Story
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>

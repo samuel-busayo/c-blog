@@ -1,0 +1,59 @@
+<!-- Font Awesome CDN with async loading -->
+<script>
+  document.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" ' +
+  'integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" ' +
+  'crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media=\'all\'">');
+</script>
+
+<footer class="site-footer">
+  <!-- Nigerian flag accent bar -->
+  <div class="flag-bar"></div>
+  
+  <div class="footer-content">
+    <div class="social-links">
+      <!-- WhatsApp (Primary for Nigeria) -->
+      <a href="https://wa.me/2348096048157" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      
+      <!-- Instagram -->
+      <a href="https://instagram.com/YOUR_HANDLE" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+      <!-- Facebook -->
+      <a href="https://facebook.com/YOUR_PAGE" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Like our Facebook Page">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      
+      <!-- Nairaland (Custom icon) -->
+      <a href="https://www.nairaland.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Visit Nairaland Forum">
+        <i class="fas fa-comments"></i>
+      </a>
+    </div>
+    
+    <!-- Footer navigation links -->
+    <nav class="footer-nav">
+      <a href="/about" class="footer-link">About Us</a>
+      <a href="/privacy" class="footer-link">Privacy Policy</a>
+      <a href="/terms" class="footer-link">Terms of Service</a>
+      <a href="/contact" class="footer-link">Contact</a>
+    </nav>
+    
+    <!-- Copyright -->
+    <p class="copyright">
+      © <span class="brand">C-Blog</span> 
+      <span id="current-year"><%= new Date().getFullYear() %></span>. 
+      All rights reserved.<br>
+      <span class="location">Lagos, Nigeria</span>
+    </p>
+  </div>
+</footer>
+
+<!-- Fallback if JavaScript is disabled -->
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+</noscript>

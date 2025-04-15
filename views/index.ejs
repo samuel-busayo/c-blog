@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C-Blog - Share Your Relationship Stories</title>
+  <link rel="preload" href="/images/carousel-1.jpg" as="image">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/styling.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main class="homepage">
+    <!-- Hero Section with Carousel -->
+    <section class="hero">
+      <div class="carousel">
+        <div class="carousel-inner">
+          <% for(let i = 1; i <= 8; i++) { %>
+            <div class="carousel-item">
+              <img src="/images/carousel-<%= i %>.webp" alt="Relationship image <%= i %>" class="carousel-image">
+            </div>
+          <% } %>
+        </div>
+      </div>
+      
+      <div class="hero-content">
+        <h1 class="hero-title">Relationship Experiences & Advice</h1>
+        <p class="hero-subtitle">Anonymously Share your dating and marriage experiences and advice/tips to the whole world.</p>
+        <div class="hero-actions">
+          <a href="/create" class="btn btn-primary" style="font-weight: 600;">Create Post</a>
+          <a href="/posts" class="btn btn-secondary">View Posts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Posts Section -->
+    <section class="featured-posts">
+      <h2 class="section-title">Featured Stories</h2>
+      <div class="posts-grid">
+        <% for(let i = 0; i < 6; i++) { %>
+          <article class="post-card">
+            <div class="post-image">
+              <img src="/images/post-<%= i+1 %>.webp" alt="Post image">
+            </div>
+            <div class="post-content">
+              <h3 class="post-title">How We Survived Our First Year of Marriage</h3>
+              <p class="post-author">By Anonymous</p>
+              <p class="post-excerpt">When we first got married, we had no idea what challenges awaited us. The first year was particularly difficult because...</p>
+              <a href="/posts/1" class="read-more">Read More →</a>
+            </div>
+          </article>
+        <% } %>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="about-content">
+        <h2 class="section-title">About C-Blog</h2>
+        <p>C-Blog is a safe space for sharing personal relationship stories, advice, and experiences. Whether you're celebrating love or navigating challenges, your story matters.</p>
+        <p>All posts are anonymous to protect privacy while fostering honest conversations about relationships.</p>
+        <div class="cta-buttons">
+          <a href="/create" class="btn btn-outline">Share Your Story</a>
+          <a href="/posts" class="btn btn-outline">Read Experiences</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
