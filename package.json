@@ -1,10 +1,9 @@
 {
   "name": "c-blog",
   "version": "1.0.0",
-  "start": "node index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
